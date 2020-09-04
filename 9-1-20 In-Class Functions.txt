@@ -1,0 +1,40 @@
+'''
+volume of a cone = 3.14*r**2*(h/3)
+takes two arguements(X,Y) = (x*y)*100.00/42.0
+'''
+
+def main () :
+    
+    print("Please enter two values.")
+    x = float(input("x = "))
+    y = float(input("y = "))
+    cone_volume_a(x, y)
+    math_function_a(x, y)
+    cone = cone_volume_b()
+    print("\nVolume of cone B is: "+str(cone))
+    
+def cone_volume_a (x, y) :
+    
+    volume = 3.14*(x**2)*(y/3)
+    
+    print("\nThe volume of a cone is: "+str(volume))
+       
+    
+def math_function_a (num1, num2) :
+    
+    ans = (num1*num2)*100.00/42.0
+    
+    print("\nThe answer for the function (X*Y)*100.00/42.0 is: "+str(ans))
+    
+    
+def cone_volume_b () :
+    
+    radius = float(input("radius = "))
+    height = float(input("height = "))
+    
+    volume = 3.14*(radius**2)*(height/3)
+    
+    return volume
+    
+    
+main()

@@ -1,0 +1,108 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Quintan Seyfert
+
+Created on Thu Sep  3 17:29:07 2020
+
+Title: 
+"""
+
+def main():
+    
+    get_out_of_bed()
+
+def get_out_of_bed():
+    
+    print("\nShould I get out of bed?")
+    choice = input("\nIs it the weekend? y/n ").lower()
+    
+    if (choice == "y"):
+        dog()
+        
+    elif (choice == "n"):
+        vacation()
+        
+    else:
+        print("\nThat was not a choice.")
+        get_out_of_bed()
+
+def dog():
+    
+    choice = input("\nDo I have a dog? y/n ").lower()
+    
+    if (choice == "y"):
+        print("\nWell then get out of bed and let the dog out!")
+        
+    elif (choice == "n"):
+        print("\nGo ahead and stay in bed")
+        
+    else:
+        print("\nThat was not a choice.")
+        dog()
+    
+def vacation():
+    
+    choice = input("\nAm I on vacation? y/n ").lower()
+    
+    if (choice == "y"):
+        print("\nGo ahead and stay in bed")
+        
+    elif (choice == "n"):
+        job()
+        
+    else:
+        print("\nThat was not a choice.")
+        vacation()
+
+
+def job():
+
+    choice = input("\nDo I have a job? y/n ").lower()
+    
+    if (choice == "y"):
+        print("\nThen get out of bed and get ready for work.")
+        ready_for_work()
+        
+    elif (choice == "n"):
+        print("\nGo ahead and stay in bed")
+        
+    else:
+        print("\nThat was not a choice.")
+        job()
+
+
+def ready_for_work():
+
+    choice = int(input("\nDo I drive myself or do I need my transit pass?"\
+                "\nPress 1 to pick up your keys and 2 to pick up the pass: "))
+    
+    if (choice == 1):
+        car()
+                
+    elif (choice == 2):
+        print("\nYou got you pass, now go to work.")
+        
+    else:
+        print("\nThat was not a choice.")
+        ready_for_work()
+
+
+def car():
+    car = input("\nOk I've got my keys. Do I have a car? y/n ")
+        
+    if (car == "y"):
+        print("\nThen go to work.")
+        
+    elif (car == "n"):
+        print("\nThen why did I grab the keys?")
+        ready_for_work()
+                
+    else:
+        print("\nThat was not a choice.")
+        car()
+
+
+
+
+
+main ()
